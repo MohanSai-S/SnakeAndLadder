@@ -7,6 +7,7 @@ public class SnakeAndLadder {
 	public static void main(String[] args) {
 		
 		int posOfPlayer1=0;
-		System.out.println("Player is At the initial position,"+ 0);
+		int Dice =(int) Math.round(Math.floor(Math.random()*10)%6+1);
+		System.out.println("Number Shown on the dice = "+ Dice);
 	}
 }
