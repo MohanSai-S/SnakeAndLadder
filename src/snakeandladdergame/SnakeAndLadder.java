@@ -9,8 +9,10 @@ public class SnakeAndLadder {
 	public static void main(String[] args) {
 		// Variables
 	    int posOfPlayer1=0;
+	    int noOfRollsByDice=0;
 	    // Computations
 	    while( posOfPlayer1<100) {
+	    	noOfRollsByDice++;
 			int dice =(int) Math.round(Math.floor(Math.random()*10)%6+1);
 			int optionCheck=(int) Math.round(Math.floor(Math.random()*10)%3);
 			switch (optionCheck) {
@@ -35,5 +37,6 @@ public class SnakeAndLadder {
 			System.out.println("Number Shown on the dice = "+ dice);
 			System.out.println("Player1 position : "+ posOfPlayer1);
 		}
+	    System.out.println("Rolls taken by Dice in Winning Journey : "+ noOfRollsByDice);
 	}
 }
