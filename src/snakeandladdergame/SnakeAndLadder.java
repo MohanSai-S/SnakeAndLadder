@@ -28,6 +28,10 @@ public class SnakeAndLadder {
 					System.out.println("No Chance to Play");
 					break;
 			}
+			if (posOfPlayer1>100) {
+				System.out.println("No Play");
+				posOfPlayer1 -= dice;
+			}
 			System.out.println("Number Shown on the dice = "+ dice);
 			System.out.println("Player1 position : "+ posOfPlayer1);
 		}
