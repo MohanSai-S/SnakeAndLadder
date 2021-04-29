@@ -9,8 +9,6 @@ public class SnakeAndLadder {
 	public static void main(String[] args) {
 		// Variables
 	    int posOfPlayer1=0;
-//	    int dice=0;
-//	    int optionCheck=0;
 	    // Computations
 	    while( posOfPlayer1<100) {
 			int dice =(int) Math.round(Math.floor(Math.random()*10)%6+1);
@@ -29,10 +27,6 @@ public class SnakeAndLadder {
 				default:
 					System.out.println("No Chance to Play");
 					break;
-			}
-			if (posOfPlayer1>100) {
-				System.out.println("No Play");
-				posOfPlayer1 -= dice;
 			}
 			System.out.println("Number Shown on the dice = "+ dice);
 			System.out.println("Player1 position : "+ posOfPlayer1);
