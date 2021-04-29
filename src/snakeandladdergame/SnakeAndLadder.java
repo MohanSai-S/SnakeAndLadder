@@ -9,23 +9,33 @@ public class SnakeAndLadder {
 	public static void main(String[] args) {
 		// Variables
 	    int posOfPlayer1=0;
-		// Computations
-		int Dice =(int) Math.round(Math.floor(Math.random()*10)%6+1);
-		int optionCheck=(int) Math.round(Math.floor(Math.random()*10)%3);
-		switch (optionCheck) {
-			case isLadder:
-				posOfPlayer1 += Dice;
-				break;
-			case isSnake:
-				posOfPlayer1 -= Dice;
-				if (posOfPlayer1 < 0)
-					posOfPlayer1=0;
-				break;
-			default:
-				break;
+//	    int dice=0;
+//	    int optionCheck=0;
+	    // Computations
+	    while( posOfPlayer1<100) {
+			int dice =(int) Math.round(Math.floor(Math.random()*10)%6+1);
+			int optionCheck=(int) Math.round(Math.floor(Math.random()*10)%3);
+			switch (optionCheck) {
+				case isLadder:
+					System.out.println("You got Ladder");
+					posOfPlayer1 += dice;
+					break;
+				case isSnake:
+					System.out.println("Snake bites");
+					posOfPlayer1 -= dice;
+					if (posOfPlayer1 < 0)
+						posOfPlayer1=0;
+					break;
+				default:
+					System.out.println("No Chance to Play");
+					break;
+			}
+			if (posOfPlayer1>100) {
+				System.out.println("No Play");
+				posOfPlayer1 -= dice;
+			}
+			System.out.println("Number Shown on the dice = "+ dice);
+			System.out.println("Player1 position : "+ posOfPlayer1);
 		}
-		System.out.println("Player1 position : "+ posOfPlayer1);
-		System.out.println("Number Shown on the dice = "+ Dice);
-		
 	}
 }
