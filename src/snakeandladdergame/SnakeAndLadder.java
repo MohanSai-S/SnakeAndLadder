@@ -16,8 +16,8 @@ public class SnakeAndLadder {
 	    // Computations
 	    while( posOfPlayer1<100 && posOfPlayer2<100) {
 	    	noOfRollsByDice++;
-			int dice =(int) Math.round(Math.floor(Math.random()*10)%6+1);
-			int optionCheck=(int) Math.round(Math.floor(Math.random()*10)%3);
+			int dice =(int) Math.floor(Math.random()*10)%6+1;
+			int optionCheck=(int) Math.floor(Math.random()*10)%3;
 			switch (optionCheck) {
 				case isLadder:
 					System.out.println("You got Ladder");
