@@ -2,10 +2,10 @@ package snakeandladdergame;
 
 public class SnakeAndLadder {
 	//Constants
-	public static final int isPlayer1=0;
-	public static final int isPlayer2=1;
-	public static final int isLadder=1;
-	public static final int isSnake=2;
+	public static final int IS_PLAYER1=0;
+	public static final int IS_PLAYER2=1;
+	public static final int IS_LADDER=1;
+	public static final int IS_SNAKE=2;
 	
 	public static void main(String[] args) {
 		// Variables
@@ -19,17 +19,17 @@ public class SnakeAndLadder {
 			int dice =(int) Math.floor(Math.random()*10)%6+1;
 			int optionCheck=(int) Math.floor(Math.random()*10)%3;
 			switch (optionCheck) {
-				case isLadder:
+				case IS_LADDER:
 					System.out.println("You got Ladder");
-					if (player == isPlayer2) {
+					if (player == IS_PLAYER2) {
 						posOfPlayer2 += dice;
 					}else {
 						posOfPlayer1 += dice;
 					}
 					break;
-				case isSnake:
+				case IS_SNAKE:
 					System.out.println("Snake bites");
-					if (player == isPlayer1) {
+					if (player == IS_PLAYER1) {
 						posOfPlayer1 -= dice;
 						if (posOfPlayer1 < 0)
 							posOfPlayer1=0;
@@ -45,7 +45,7 @@ public class SnakeAndLadder {
 			}
 			if (posOfPlayer1>100 || posOfPlayer2>100) {
 				System.out.println("No Play");
-				if(player== isPlayer1) {
+				if(player== IS_PLAYER1) {
 					posOfPlayer1 -= dice;
 				}else {
 					posOfPlayer2 -= dice;
@@ -56,7 +56,7 @@ public class SnakeAndLadder {
 			System.out.println("Player2 position : "+ posOfPlayer2);
 			if(optionCheck==1) {
 				System.out.println("Congrats! One more Chance.");
-			}else if (player == isPlayer1) {
+			}else if (player == IS_PLAYER1) {
 				System.out.println("Second Player turn");
 				player=1;
 			}else {
